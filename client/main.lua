@@ -47,9 +47,11 @@ AddEventHandler('esx_barbie_lyftupp:start', function()
 		return
 	end
 	TriggerServerEvent('esx_barbie_lyftupp:checkRope')
-	ESX.ShowNotification('Zaczynasz podnosic ...')
-	TriggerServerEvent('esx_barbie_lyftupp:sendInfo', GetPlayerServerId(player))
-	Citizen.Wait(5000)
+	if isCarry == false
+		ESX.ShowNotification('Zaczynasz podnosic ...')
+		TriggerServerEvent('esx_barbie_lyftupp:sendInfo', GetPlayerServerId(player))
+		Citizen.Wait(5000)
+	end
 	local dict = "anim@heists@box_carry@"
 				
 	RequestAnimDict(dict)
