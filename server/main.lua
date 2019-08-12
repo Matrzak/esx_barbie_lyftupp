@@ -7,6 +7,13 @@ TriggerEvent('esx:getSharedObject', function(obj)
 	ESX = obj
 end)
 
+AddEventHandler('chatMessage', function(player, playerName, message)
+    if message:sub(1) == '/podnies' then
+        TriggerClientEvent('esx_barbie_lyftupp:start', player)
+        CancelEvent()
+    end
+end)
+
 RegisterServerEvent('esx_barbie_lyftupp:checkRope')
 AddEventHandler('esx_barbie_lyftupp:checkRope', function()
 	local _source = source
@@ -37,7 +44,8 @@ AddEventHandler('esx_barbie_lyftupp:lyfter', function(target)
 	TriggerClientEvent('esx_barbie_lyftupp:upplyft', targetPlayer.source, source)
 end)
 
-RegisterServerEvent('esx_barbie_lyftupp:lyfteruppn')
-AddEventHandler('esx_barbie_lyftupp:lyfteruppn', function(source)
-	TriggerClientEvent('esx:showNotification', source, ('Someone is trying to lift you up...'))
+RegisterServerEvent('esx_barbie_lyftupp:sendInfo')
+AddEventHandler('esx_barbie_lyftupp:sendInfo', function(source)
+	TriggerClientEvent('esx:showNotification', source, ('Ktos probuje cie podnies...'))
 end)
+
