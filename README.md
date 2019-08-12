@@ -18,11 +18,9 @@ end
 
 Om du vill använda engelska verisonen så byter du namn på detta i client.
 "en-main.lua" till "main.lua"
-
-Glöm inte bara skriva in i server.cfg "start esx_barbie_lyftupp"
-
-
-
+### POLISH ###
+Jest to fork skryptu esx_barbie_lyftupp pozwalajacy na podnoszenie graczy
+za pomoca komendy
 
 ### ENGLISH ###
 
